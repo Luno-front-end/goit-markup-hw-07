@@ -486,8 +486,8 @@ img {
 
 .btn-close {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   background-image: url(../images/close-modal.svg);
@@ -1050,8 +1050,7 @@ img {
 }
 
 .bg-footer .container {
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 60px;
 }
 
 .flex-footer {
