@@ -131,7 +131,12 @@ img {
   border-bottom-color: #ececec;
 }
 
-/* hrader */
+.general-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .general-nav {
   color: #212121;
   display: block;
@@ -144,6 +149,29 @@ img {
   outline: none;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.general-nav:hover {
+  color: #2196f3;
+}
+
+.general-nav:focus {
+  color: #2196f3;
+}
+
+.current {
+  color: #2196f3;
+}
+
+.current::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  display: block;
+  background-color: #2196f3;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
 }
 
 .number-nav {
@@ -163,6 +191,14 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.number-nav:hover {
+  color: #2196f3;
+}
+
+.number-nav:focus {
+  color: #2196f3;
+}
+
 .phone-icon {
   fill: #757575;
   width: 10px;
@@ -179,13 +215,6 @@ img {
   margin-right: 10px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.general-nav:hover,
-.general-nav:focus,
-.number-nav:hover,
-.number-nav:focus {
-  color: #2196f3;
 }
 
 .number-nav:hover .phone-icon {
@@ -218,22 +247,6 @@ img {
   margin-left: auto;
 }
 
-.current {
-  color: #2196f3;
-}
-
-.current::after {
-  position: absolute;
-  bottom: 0;
-  content: '';
-  display: block;
-  background-color: #2196f3;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-}
-
-/* flex */
 .general-ul.nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,13 +366,6 @@ img {
   margin-bottom: 30px;
 }
 
-.policy-input {
-  margin-left: 23.48px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .policy .general-a {
   display: inline-block;
   color: #2196f3;
@@ -367,6 +373,13 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.policy-input {
+  margin-left: 23.48px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .btn-modal {
@@ -573,14 +586,6 @@ img {
   margin-right: 0px;
 }
 
-/* flex */
-.general-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/* What are we doing */
 .section-two .container {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -693,6 +698,14 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-box:hover {
+  background-color: #2196f3;
+}
+
+.social-box:focus {
+  background-color: #2196f3;
+}
+
 .instagram {
   fill: #afb1b8;
   width: 20px;
@@ -731,11 +744,6 @@ img {
   margin-right: auto;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-box:hover,
-.social-box:focus {
-  background-color: #2196f3;
 }
 
 .social-box:hover .instagram,
@@ -779,7 +787,10 @@ img {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.company-border:hover,
+.company-border:hover {
+  border-color: #2196f3;
+}
+
 .company-border:focus {
   border-color: #2196f3;
 }
@@ -812,6 +823,28 @@ img {
 .company-border:hover .logo-six,
 .company-border:focus .logo-six {
   fill: #2196f3;
+}
+
+.company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item-company {
+  width: calc((100% - 150px) / 6);
+  margin-right: 30px;
+}
+
+.item-company:nth-child(6n) {
+  margin-right: 0px;
+}
+
+.social-network .item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .logo-one {
@@ -874,28 +907,6 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.company {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.item-company {
-  width: calc((100% - 150px) / 6);
-  margin-right: 30px;
-}
-
-.item-company:nth-child(6n) {
-  margin-right: 0px;
-}
-
-.social-network .item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .logo {
   color: #212121;
   font-family: Raleway;
@@ -914,6 +925,10 @@ img {
 
 .bg-footer {
   background-color: #2f303a;
+}
+
+.bg-footer .container {
+  padding-bottom: 60px;
 }
 
 .general-address {
@@ -936,6 +951,22 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.flex-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.general-flex .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.flex-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .number-footer {
@@ -972,9 +1003,19 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fsocial-box:hover,
+.fsocial-box:hover {
+  background-color: #2196f3;
+}
+
 .fsocial-box:focus {
   background-color: #2196f3;
+}
+
+.address-ul {
+  width: 231px;
+  height: 21px;
+  margin-top: 9px;
+  margin-bottom: 28px;
 }
 
 .instagram-two {
@@ -1009,18 +1050,6 @@ img {
   margin-right: auto;
 }
 
-.copyright {
-  color: rgba(255, 255, 255, 0.4);
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 18px;
-  padding-bottom: 21px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  text-align: center;
-}
-
 .input {
   margin-right: 12px;
   width: 358px;
@@ -1035,38 +1064,11 @@ img {
   margin-top: 56px;
 }
 
-.address-ul {
-  width: 231px;
-  height: 21px;
-  margin-top: 9px;
-  margin-bottom: 28px;
-}
-
 .footer-m {
   width: 206px;
   height: 81px;
   margin-top: 56px;
   margin-right: 93px;
-}
-
-.bg-footer .container {
-  padding-bottom: 60px;
-}
-
-.flex-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.general-flex .item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.flex-sub {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .container-portfolio {
@@ -1229,4 +1231,4 @@ img {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
-/*# sourceMappingURL=mine.css.map */
+/*# sourceMappingURL=maine.css.map */

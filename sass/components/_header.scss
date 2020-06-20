@@ -1,4 +1,3 @@
-/* hrader */
 .general-nav {
   color: $primary-text-color;
 
@@ -14,103 +13,27 @@
   outline: none;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.number-nav {
-  display: flex;
-  align-items: center;
-  color: $connection;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  outline: none;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.phone-icon {
-  fill: $connection;
-  width: 10px;
-  height: 14.94px;
-
-  margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mail-icon {
-  fill: $connection;
-  width: 16px;
-  height: 11.2px;
-
-  margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.general-nav:hover,
-.general-nav:focus,
-.number-nav:hover,
-.number-nav:focus {
-  color: $acent-text-color;
-}
-
-.number-nav:hover .phone-icon {
-  fill: $acent-text-color;
-}
-.number-nav:focus .phone-icon {
-  fill: $acent-text-color;
-}
-.number-nav:hover .mail-icon {
-  fill: $acent-text-color;
-}
-.number-nav:focus .mail-icon {
-  fill: $acent-text-color;
-}
-.list-number {
-  display: flex;
-}
-.number-info .list-number:not(:last-child) {
-  margin-right: 30px;
-}
-
-.number-info {
-  margin-left: auto;
+  &:hover {
+    color: $acent-text-color;
+  }
+  &:focus {
+    color: $acent-text-color;
+  }
 }
 
 .current {
   color: $acent-text-color;
-}
-.current::after {
-  position: absolute;
-  bottom: 0;
+  &::after {
+    position: absolute;
+    bottom: 0;
 
-  content: '';
-  display: block;
+    content: '';
+    display: block;
 
-  background-color: $acent-text-color;
+    background-color: $acent-text-color;
 
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-}
-
-/* flex */
-
-.general-ul.nav-list {
-  display: flex;
-}
-
-.nav-list .nav-item:not(:last-child) {
-  margin-right: 50px;
-}
-.nav-list {
-  margin-left: 86px;
-}
-
-.number-info {
-  display: flex;
-}
-.flex-boxoll {
-  display: flex;
-}
-.flex-boxnav {
-  align-items: center;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
 }

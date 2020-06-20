@@ -59,9 +59,9 @@ img {
 
   border: none;
   cursor: pointer;
-}
-.footerbtn-text:focus {
-  outline: 2px solid $primery-text-white;
+  &:focus {
+    outline: 2px solid $primery-text-white;
+  }
 }
 
 .input {
@@ -74,17 +74,19 @@ img {
   outline: none;
 }
 
-.icon-btn::after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-btn {
+  &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
 
-  margin-left: 10px;
+    margin-left: 10px;
 
-  background-image: url(../images/icon-send.svg);
+    background-image: url(../images/icon-send.svg);
+  }
 }
 .container {
   margin: 0 auto;
@@ -95,21 +97,23 @@ img {
 
 .link-block {
   display: block;
-}
-
-.link-block::before {
-  display: block;
-  content: '';
-  width: 270px;
-  height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $bg-none-light;
-  border-radius: 4px;
+  &::before {
+    display: block;
+    content: '';
+    width: 270px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $bg-none-light;
+    border-radius: 4px;
+  }
 }
 
 .header-portfolio {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ececec;
+}
+.general-flex {
+  display: flex;
 }
